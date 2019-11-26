@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.escape.dao.ChurchMemberMapper">
+	<select id="getChurchMemberList" parameterType="java.util.Map"
+		resultType="com.escape.domain.ChurchMember">
+		SELECT ID,
+		EMAIL,
+		NAME,
+		CHURCH_NAME,
+		CHURCH_ROOT,
+		CHURCH_CATEGORY,
+		SEND_EMAIL_YN,
+		SEND_ZC_YN,
+		DEL_YN,
+		INS_DATE,
+		UPD_DATE
+		FROM church_member
+		order by CHURCH_NAME,NAME
+		limit #{limit}
+		offset  #{offset}
+	</select>
+	
+	<select id="getChurchMemberCnt" resultType="java.lang.Integer">
+		SELECT COUNT(0) AS CNT FROM church_member
+	</select>
+	
+</mapper>

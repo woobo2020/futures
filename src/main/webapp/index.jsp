@@ -1,3 +1,3 @@
 <script type="text/javascript">
-location.href="/churchlist.do";
+location.href="church/churchMemberList.do";
 </script>

@@ -14,7 +14,7 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			/WEB-INF/config/applicationContext.xml
+			/WEB-INF/config/root-context.xml
 		</param-value>
 	</context-param>
 

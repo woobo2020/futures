@@ -8,6 +8,8 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 
+<link href="/resources/css/bootstrap.css" rel="stylesheet">
+
 <style type="text/css">
 #box
 {
@@ -47,13 +49,21 @@
 		<c:forEach var="item" items="${list}">
 		<tbody>
 			<tr>
-				<td style="text-align: center;">${item.first}</td>
-				<td style="text-align: center;">${item.second}</td>
-				<td style="text-align: center;">${item.third}</td>
+				<td style="text-align: center;">${item.name}</td>
+				<td style="text-align: center;">${item.church_name}</td>
+				<td style="text-align: center;">${item.church_category}</td>
 			</tr>
 		</tbody>
 		</c:forEach>
 	</table>
+		<nav class="text-center pt20">
+						<ul class="pagination">
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+						</ul>
+					</nav>
 	</div>
 </body>
 </html>
